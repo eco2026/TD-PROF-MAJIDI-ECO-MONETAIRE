@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD n°2 Corrigé complet - Économie Monétaire et Financière I | Pr. Majidi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #1a2a3a;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0b2b3b, #1a4a6f);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .header h1 span {
+            font-weight: normal;
+            font-size: 1.2rem;
+            display: block;
+            color: #cbd5e0;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .lang-tabs {
+            display: flex;
+            border-bottom: 2px solid #e2e8f0;
+            background-color: #f8fafc;
+        }
+
+        .lang-btn {
+            flex: 1;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #4a5568;
+        }
+
+        .lang-btn.active {
+            color: #1a4a6f;
+            border-bottom: 3px solid #1a4a6f;
+            background-color: white;
+        }
+
+        .lang-btn:not(.active):hover {
+            background-color: #edf2f7;
+        }
+
+        .content {
+            padding: 30px 40px;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #0b2b3b;
+            border-left: 5px solid #1a4a6f;
+            padding-left: 15px;
+            margin: 30px 0 15px 0;
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            color: #2c5282;
+            margin: 25px 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .question {
+            background-color: #eef2ff;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+            border-left: 4px solid #1a4a6f;
+        }
+
+        .answer {
+            margin: 10px 0 15px 20px;
+            padding-left: 15px;
+            border-left: 2px solid #cbd5e0;
+        }
+
+        .justification {
+            background-color: #f1f5f9;
+            padding: 12px 18px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 0.95rem;
+            color: #334155;
+        }
+
+        .justification strong {
+            color: #1e3a5f;
+        }
+
+        .true {
+            color: #2b6e3b;
+            font-weight: bold;
+        }
+
+        .false {
+            color: #c53030;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background-color: #e2e8f0;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #1a2a3a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>TD n°2 - Économie Monétaire et Financière I <span>Pr. Errachid Majidi</span></h1>
+        <p>Année universitaire 2025-2026 | Corrigé intégral basé sur le cours (pages référencées)</p>
+    </div>
+
+    <div class="lang-tabs">
+        <button class="lang-btn active" id="btn-fr">🇫🇷 Français (Complet)</button>
+        <button class="lang-btn" id="btn-ar">🇲🇦 العربية (كامل)</button>
+    </div>
+
+    <div class="content">
+        <!-- ==================== FRANÇAIS COMPLET ==================== -->
+        <div id="content-fr" class="lang-content active">
+            <h2>I. Pour chacune des phrases suivantes, choisissez la ou les bonnes propositions</h2>
+
+            <!-- Question 1 -->
+            <div class="question">1. Parmi les opérations suivantes, celles qui peuvent être considérées comme des opérations de création monétaire sont :</div>
+            <div class="answer">
+                ✅ <strong>B</strong> – Le Trésor public règle les salaires des fonctionnaires qui ont un compte chez lui.<br>
+                ✅ <strong>C</strong> – Une société exportatrice reçoit sur son compte la somme de 50 000 euros en contrepartie de produits agricoles qu’elle a exportés.
+                <div class="justification">
+                    <strong>📖 Justification (pages 21-22) :</strong><br>
+                    • <strong>B</strong> (p.25) : "Le Trésor public crée de la monnaie lorsqu'il crédite un compte à vue pour payer un fonctionnaire qui a un compte chez lui."<br>
+                    • <strong>C</strong> (p.22) : "L'entrée de devises constitue la deuxième source la plus importante de création monétaire. Lorsqu'une entreprise résidente exporte, elle crée une nouvelle quantité de monnaie."<br>
+                    ❌ <strong>A</strong> (p.21) : "Toute opération qui lie un agent financier avec un autre agent financier ne peut donner lieu à une création monétaire."<br>
+                    ❌ <strong>D</strong> (p.22) : "La sortie de devise est une destruction monétaire."<br>
+                    ❌ <strong>E</strong> : Faux car B et C sont correctes.
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">5. Dans la politique monétaire, l’objectif privilégié par les autorités monétaires est actuellement :</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – La stabilité des prix.<br>
+                ✅ <strong>D</strong> – La lutte contre l’inflation.
+                <div class="justification">
+                    <strong>📖 Justification (p.31) :</strong><br>
+                    "De nos jours, les autorités monétaires se concentrent beaucoup plus sur le premier objectif [la stabilité des prix]. Préserver le pouvoir d’achat des agents économiques en luttant contre l’inflation semble être prioritaire."<br>
+                    ❌ <strong>A et B</strong> : La croissance et le plein emploi sont des objectifs finals mais moins prioritaires.
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">6. Parmi les instruments de la politique monétaire, celui qui est privilégié actuellement par la banque centrale au Maroc est :</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – L’intervention dans le marché interbancaire.<br>
+                ✅ <strong>D</strong> – La réserve obligatoire.
+                <div class="justification">
+                    <strong>📖 Justification (p.32-34) :</strong><br>
+                    • (p.32-33) : "Les moyens d’intervention privilégiés de la banque centrale sur le marché interbancaire sont l’open market et les pensions."<br>
+                    • (p.33) : "La politique de réserve obligatoire est devenue un instrument de la politique monétaire."<br>
+                    ❌ <strong>A</strong> (p.34) : "L'encadrement du crédit a été abandonné au Maroc en 1991."<br>
+                    ❌ <strong>B</strong> : Le réescompte est utilisé mais moins privilégié.
+                </div>
+            </div>
+
+            <h2>II. Pour chacune des propositions suivantes, dites si c’est vrai ou faux en justifiant</h2>
+
+            <div class="question">1. Lorsqu’un client d’une banque commerciale verse la somme de 5000 dh dans son compte bancaire, il ne s’agit pas d’une création monétaire.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.21 :</strong> "Le dépôt ou le retrait de billets par un agent non financier ne peut être considéré comme une création monétaire car il s’agit seulement d’une transformation de la forme monétaire (de fiduciaire à scripturale ou inversement) qui n’a aucun impact sur la capacité de dépense des ANFR."</div>
+            </div>
+
+            <div class="question">2. Lorsque le Trésor public paie les salaires des fonctionnaires qui ont des comptes auprès des banques commerciales, il s’agit d’une création monétaire.</div>
+            <div class="answer"><span class="false">✘ FAUX</span>
+                <div class="justification"><strong>p.25 :</strong> "Le Trésor public crée de la monnaie lorsqu'il crédite un compte à vue pour payer un fonctionnaire qui a un compte chez lui. Si le fonctionnaire a un compte en banque commerciale, le paiement sort du circuit du Trésor et ne constitue pas une création monétaire par le Trésor."</div>
+            </div>
+
+            <div class="question">3. La banque centrale a un rôle fondamental dans la création monétaire.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.26 :</strong> "La Banque centrale a un double rôle (...) un rôle direct marginal, et un rôle indirect primordial. Elle contrôle le pouvoir de création monétaire des banques commerciales via le contrôle de la liquidité bancaire et a le monopole de l'émission des billets."</div>
+            </div>
+
+            <div class="question">4. La croissance économique est un objectif intermédiaire de la politique monétaire.</div>
+            <div class="answer"><span class="false">✘ FAUX</span>
+                <div class="justification"><strong>p.31 :</strong> "On distingue deux types d’objectifs : les objectifs finals et les objectifs intermédiaires. La croissance économique fait partie des objectifs finals au même titre que la stabilité des prix, l'équilibre externe et le plein emploi."</div>
+            </div>
+
+            <div class="question">5. L’encadrement du crédit est un instrument qui n’est plus utilisé par les banques centrales.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.34 :</strong> "Pour l’ensemble de ces raisons, cette technique a été abandonnée dans plusieurs pays notamment en France en 1987 et au Maroc en 1991."</div>
+            </div>
+
+            <div class="question">6. Les banques commerciales sont un acteur important de la création monétaire.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.23 :</strong> "Les banques commerciales jouent un rôle primordial au niveau de la création monétaire. Elles effectuent plusieurs opérations créatrices de monnaie : octroi de crédits, conversion de devises, achat de titres financiers, achat d'actifs physiques."</div>
+            </div>
+
+            <h2>III. Expliquez les sources de la création monétaire</h2>
+            <div class="justification">
+                <strong>📖 D'après les pages 21-22-23-25 :</strong><br><br>
+                <strong>Sources principales :</strong><br>
+                1. <strong>L'octroi de crédit par les banques commerciales</strong> : Création "ex nihilo" par simple jeu d'écriture. C'est la source la plus importante.<br>
+                2. <strong>L'entrée de devises</strong> : Exportations, transferts de l'étranger, dépenses des touristes étrangers.<br><br>
+                <strong>Sources secondaires :</strong><br>
+                3. L'achat par une banque commerciale d'un <strong>titre financier</strong> émis par un ANFR.<br>
+                4. L'achat par une banque commerciale d'un <strong>bien physique</strong> auprès d'un ANFR.<br>
+                5. Le paiement par le <strong>Trésor public</strong> des salaires des fonctionnaires qui ont un compte chez lui (circuit fermé).
+            </div>
+
+            <h2>IV. Le pouvoir de création monétaire des banques commerciales est-il illimité ? Justifiez</h2>
+            <div class="justification">
+                <strong>📖 Non, il est limité par trois facteurs (pages 23-24) :</strong><br>
+                1. <strong>Elles ne créent pas la monnaie fiduciaire</strong> : Seule la Banque centrale a le monopole de l'émission des billets (monnaie centrale).<br>
+                2. <strong>Elles subissent des fuites en monnaie centrale</strong> : Retraits par la clientèle ou transferts vers d'autres banques.<br>
+                3. <strong>Elles sont soumises à la réserve obligatoire</strong> : La Banque centrale impose un pourcentage des dépôts à bloquer dans les comptes à la Banque centrale.
+            </div>
+
+            <h2>V. Quels sont les facteurs qui agissent négativement sur la liquidité bancaire ?</h2>
+            <div class="justification">
+                <strong>📖 D'après les pages 27-28 :</strong><br>
+                1. <strong>Les retraits de billets par la clientèle</strong> : Toute opération de retrait diminue la liquidité bancaire.<br>
+                2. <strong>La sortie de devises</strong> : Conversion de la monnaie nationale en devises (importations, paiements à l'étranger).<br>
+                3. <strong>Les opérations avec l'administration centrale (Trésor)</strong> : Quand les paiements des clients au Trésor (impôts, amendes) sont supérieurs aux paiements reçus du Trésor.<br>
+                4. <strong>L'augmentation du taux de réserve obligatoire</strong> : Les banques doivent bloquer davantage de monnaie centrale, réduisant leur liquidité disponible.
+            </div>
+
+            <h2>VI. Quelle est la différence entre la masse monétaire au sens de M1 et la base monétaire ?</h2>
+            <div class="justification">
+                <strong>📖 D'après les pages 17, 26 et 29 :</strong>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>Critère</th><th>Masse monétaire M1</th><th>Base monétaire</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Composition</strong></td><td>Billets + Monnaie divisionnaire (pièces) + Monnaie scripturale (comptes à vue)</td><td>Billets dans les caisses des banques + Avoirs des banques à la Banque centrale</td></tr>
+                    <tr><td><strong>Détenue par</strong></td><td>Les agents non financiers résidents (ménages et entreprises)</td><td>Les banques commerciales (et une petite partie par les ANFR)</td></tr>
+                    <tr><td><strong>Fonction</strong></td><td>Moyens de paiement immédiatement utilisables pour les transactions</td><td>"Monnaie centrale" qui sert de base à la création monétaire des banques</td></tr>
+                </tbody>
+            </table>
+            <div class="justification">
+                <strong>Résumé :</strong> M1 est la monnaie détenue par les agents économiques non financiers pour payer leurs transactions. La base monétaire est la monnaie créée par la Banque centrale et détenue principalement par les banques commerciales pour gérer leur liquidité et leur capacité de création monétaire.
+            </div>
+        </div>
+
+        <!-- ==================== ARABE COMPLET ==================== -->
+        <div id="content-ar" class="lang-content" dir="rtl">
+            <h2>I. لكل جملة من الجمل التالية، اختر الاقتراح أو الاقتراحات الصحيحة</h2>
+
+            <div class="question">1. من بين العمليات التالية، التي يمكن اعتبارها عمليات خلق نقدي:</div>
+            <div class="answer">
+                ✅ <strong>B</strong> – الخزينة العامة تدفع رواتب الموظفين الذين لديهم حساب لديها.<br>
+                ✅ <strong>C</strong> – شركة مصدرة تستلم في حسابها مبلغ 50.000 يورو مقابل منتجات فلاحية صدرتها.
+                <div class="justification">
+                    <strong>📖 التبرير (صفحات 21-22-25):</strong><br>
+                    • <strong>B</strong> (ص25): "الخزينة العامة تخلق النقود عندما تضع مبلغاً في حساب جاري لدفع راتب موظف لديه حساب لديها."<br>
+                    • <strong>C</strong> (ص22): "دخول العملات الأجنبية يشكل المصدر الثاني الأكثر أهمية لخلق النقدي. عندما تقوم شركة مقيمة بالتصدير، فإنها تخلق كمية جديدة من النقود."<br>
+                    ❌ <strong>A</strong> (ص21): "أي عملية تربط مؤسسة مالية بمؤسسة مالية أخرى لا يمكن أن تؤدي إلى خلق نقدي."<br>
+                    ❌ <strong>D</strong> (ص22): "خروج العملات الأجنبية هو عملية إتلاف نقدي."
+                </div>
+            </div>
+
+            <div class="question">5. في السياسة النقدية، الهدف الذي تفضله السلطات النقدية حالياً:</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – استقرار الأسعار.<br>
+                ✅ <strong>D</strong> – مكافحة التضخم.
+                <div class="justification"><strong>📖 ص31:</strong> "حالياً، تركز السلطات النقدية بشكل أكبر على الهدف الأول [استقرار الأسعار]. الحفاظ على القوة الشرائية للوكلاء الاقتصاديين من خلال مكافحة التضخم يبدو أولوية."</div>
+            </div>
+
+            <div class="question">6. من بين أدوات السياسة النقدية، تلك التي تفضلها البنك المركزي حالياً في المغرب:</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – التدخل في سوق ما بين البنوك.<br>
+                ✅ <strong>D</strong> – الاحتياطي الإلزامي.
+                <div class="justification">
+                    <strong>📖 ص32-34:</strong><br>
+                    • (ص32-33): "وسائل التدخل المفضلة للبنك المركزي في سوق ما بين البنوك هي السوق المفتوحة والتسبيقات."<br>
+                    • (ص33): "سياسة الاحتياطي الإلزامي أصبحت أداة من أدوات السياسة النقدية."<br>
+                    ❌ <strong>A</strong> (ص34): "تم التخلي عن تأطير الائتمان في المغرب سنة 1991."
+                </div>
+            </div>
+
+            <h2>II. لكل اقتراح من الاقتراحات التالية، قل هل هو صحيح أم خطأ مع التبرير</h2>
+
+            <div class="question">1. إيداع 5000 درهم في حساب بنكي ليس خلقاً نقدياً.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص21:</strong> "إيداع أو سحب الأوراق النقدية من طرف وكيل غير مالي لا يمكن اعتباره خلقاً نقدياً لأنه مجرد تحويل للشكل النقدي (من نقدي يدوي إلى كتابي أو العكس) وليس له أي تأثير على القدرة على الإنفاق للوكلاء غير الماليين المقيمين."</div>
+            </div>
+
+            <div class="question">2. دفع الخزينة العامة رواتب الموظفين الذين لديهم حسابات لدى البنوك التجارية هو خلق نقدي.</div>
+            <div class="answer"><span class="false">✘ خطأ</span>
+                <div class="justification"><strong>ص25:</strong> "الخزينة العامة تخلق النقود عندما تضع مبلغاً في حساب جاري لدفع راتب موظف لديه حساب لديها. إذا كان الموظف لديه حساب في بنك تجاري، فإن الدفع يخرج من دائرة الخزينة ولا يشكل خلقاً نقدياً من طرف الخزينة."</div>
+            </div>
+
+            <div class="question">3. البنك المركزي له دور أساسي في عملية الخلق النقدي.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص26:</strong> "للبنك المركزي دور مزدوج (...) دور مباشر هامشي، ودور غير مباشر أساسي. فهو يتحكم في قدرة البنوك التجارية على خلق النقود من خلال التحكم في السيولة البنكية، وله احتكار إصدار الأوراق النقدية."</div>
+            </div>
+
+            <div class="question">4. النمو الاقتصادي هو هدف وسيط للسياسة النقدية.</div>
+            <div class="answer"><span class="false">✘ خطأ</span>
+                <div class="justification"><strong>ص31:</strong> "نميز بين نوعين من الأهداف: الأهداف النهائية والأهداف الوسيطة. النمو الاقتصادي جزء من الأهداف النهائية إلى جانب استقرار الأسعار والتوازن الخارجي والتشغيل الكامل."</div>
+            </div>
+
+            <div class="question">5. تأطير الائتمان هو أداة لم تعد تستخدم من طرف البنوك المركزية.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص34:</strong> "لجميع هذه الأسباب، تم التخلي عن هذه التقنية في عدة بلدان خاصة في فرنسا سنة 1987 والمغرب سنة 1991."</div>
+            </div>
+
+            <div class="question">6. البنوك التجارية هي فاعل مهم في الخلق النقدي.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص23:</strong> "البنوك التجارية تلعب دوراً أساسياً في مستوى الخلق النقدي. فهي تقوم بعدة عمليات خالقة للنقود: منح القروض، تحويل العملات الأجنبية، شراء الأوراق المالية، شراء الأصول المادية."</div>
+            </div>
+
+            <h2>III. اشرح مصادر الخلق النقدي</h2>
+            <div class="justification">
+                <strong>📖 حسب الصفحات 21-22-23-25:</strong><br><br>
+                <strong>المصادر الرئيسية:</strong><br>
+                1. <strong>منح القروض من طرف البنوك التجارية</strong>: خلق "من لا شيء" عن طريق كتابة بسيطة. هذا هو المصدر الأكثر أهمية.<br>
+                2. <strong>دخول العملات الأجنبية</strong>: الصادرات، تحويلات المغتربين، إنفاق السياح الأجانب.<br><br>
+                <strong>المصادر الثانوية:</strong><br>
+                3. شراء بنك تجاري <strong>لورقة مالية</strong> مصدرة من وكيل غير مالي مقيم.<br>
+                4. شراء بنك تجاري <strong>لأصل مادي</strong> من وكيل غير مالي مقيم.<br>
+                5. دفع <strong>الخزينة العامة</strong> لرواتب الموظفين الذين لديهم حساب لديها (دائرة مغلقة).
+            </div>
+
+            <h2>IV. هل قدرة البنوك التجارية على خلق النقود غير محدودة؟ برر</h2>
+            <div class="justification">
+                <strong>📖 لا، محدودة بثلاثة عوامل (صفحات 23-24):</strong><br>
+                1. <strong>لا تخلق النقود اليدوية</strong>: البنك المركزي فقط من يحتكر إصدار الأوراق النقدية (النقود المركزية).<br>
+                2. <strong>تعاني من تسربات في النقود المركزية</strong>: سحوبات من طرف الزبائن أو تحويلات إلى بنوك أخرى.<br>
+                3. <strong>ملزمة بالاحتياطي الإلزامي</strong>: يفرض البنك المركزي نسبة مئوية من الودائع لتجميدها في حسابات البنوك لديه.
+            </div>
+
+            <h2>V. ما هي العوامل التي تؤثر سلباً على السيولة البنكية؟</h2>
+            <div class="justification">
+                <strong>📖 حسب الصفحات 27-28:</strong><br>
+                1. <strong>سحب الأوراق النقدية من طرف الزبائن</strong>: أي عملية سحب تقلل السيولة البنكية.<br>
+                2. <strong>خروج العملات الأجنبية</strong>: تحويل العملة الوطنية إلى عملات أجنبية (استيراد، مدفوعات للخارج).<br>
+                3. <strong>العمليات مع الإدارة المركزية (الخزينة)</strong>: عندما تكون مدفوعات الزبائن للخزينة (ضرائب، غرامات) أكبر من المدفوعات المستلمة من الخزينة.<br>
+                4. <strong>زيادة نسبة الاحتياطي الإلزامي</strong>: تضطر البنوك إلى حجب المزيد من النقود المركزية، مما يقلل سيولتها المتاحة.
+            </div>
+
+            <h2>VI. ما هو الفرق بين كتلة نقود M1 والقاعدة النقدية؟</h2>
+            <div class="justification">
+                <strong>📖 حسب الصفحات 17، 26 و 29:</strong>
+            </div>
+            <table dir="rtl">
+                <thead>
+                    <tr><th>المعيار</th><th>كتلة نقود M1</th><th>القاعدة النقدية</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>المكونات</strong></td><td>أوراق نقدية + نقود معدنية + نقود كتابية (حسابات جارية)</td><td>أوراق نقدية في صناديق البنوك + أرصدة البنوك لدى البنك المركزي</td></tr>
+                    <tr><td><strong>المالك</strong></td><td>الوكلاء غير الماليين المقيمين (الأسر والمؤسسات)</td><td>البنوك التجارية (وجزء بسيط للوكلاء غير الماليين)</td></tr>
+                    <tr><td><strong>الوظيفة</strong></td><td>وسائل دفع فورية وقابلة للاستخدام في المعاملات</td><td>"نقود مركزية" تستخدم كقاعدة لخلق النقود من طرف البنوك</td></tr>
+                </tbody>
+            </table>
+            <div class="justification">
+                <strong>خلاصة:</strong> M1 هي النقود التي يمتلكها الوكلاء الاقتصاديون غير الماليين لدفع معاملاتهم. القاعدة النقدية هي النقود التي يخلقها البنك المركزي ويمتلكها بشكل أساسي البنوك التجارية لإدارة سيولتها وقدرتها على خلق النقود.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Corrigé intégral du TD n°2 – Économie Monétaire et Financière I<br>
+        Pr. Errachid Majidi – Semestre 3 (2022-2023) – Année universitaire 2025-2026<br>
+        Toutes les justifications sont extraites du cours et référencées par numéro de page.
+    </div>
+</div>
+
+<script>
+    const btnFr = document.getElementById('btn-fr');
+    const btnAr = document.getElementById('btn-ar');
+    const contentFr = document.getElementById('content-fr');
+    const contentAr = document.getElementById('content-ar');
+
+    btnFr.addEventListener('click', () => {
+        btnFr.classList.add('active');
+        btnAr.classList.remove('active');
+        contentFr.classList.add('active');
+        contentAr.classList.remove('active');
+    });
+
+    btnAr.addEventListener('click', () => {
+        btnAr.classList.add('active');
+        btnFr.classList.remove('active');
+        contentAr.classList.add('active');
+        contentFr.classList.remove('active');
+    });
+</script>
+</body>
+</html>
