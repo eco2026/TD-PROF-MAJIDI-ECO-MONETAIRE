@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Économie monétaire et financière - Résumé complet (style littéral)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TD n°2 Corrigé complet - Économie Monétaire et Financière I | Pr. Majidi</title>
     <style>
         * {
             margin: 0;
@@ -12,509 +12,458 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
-            padding: 2rem 1.5rem;
-            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #1a2a3a;
+            line-height: 1.6;
+            padding: 20px;
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1300px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.96);
-            border-radius: 2rem;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             overflow: hidden;
         }
 
-        .container > div:not(.tabs) {
-            padding: 0 2rem 2rem 2rem;
-        }
-
-        @media (max-width: 640px) {
-            body { padding: 1rem; }
-            .container > div:not(.tabs) { padding: 0 1.2rem 1.5rem 1.2rem; }
-        }
-
-        .tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            background: #ffffff;
-            padding: 1.2rem 2rem 0 2rem;
-            border-bottom: 2px solid #eef2ff;
-        }
-
-        .tab-btn {
-            padding: 0.6rem 1.3rem;
-            border-radius: 2rem;
-            border: none;
-            background: transparent;
-            color: #475569;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .tab-btn:hover {
-            background: #f1f5f9;
-            color: #1e293b;
-            transform: translateY(-1px);
-        }
-
-        .tab-btn.active {
-            background: #0f172a;
+        .header {
+            background: linear-gradient(135deg, #0b2b3b, #1a4a6f);
             color: white;
-            box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+            padding: 30px 40px;
+            text-align: center;
         }
 
-        .section {
+        .header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .header h1 span {
+            font-weight: normal;
+            font-size: 1.2rem;
+            display: block;
+            color: #cbd5e0;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .lang-tabs {
+            display: flex;
+            border-bottom: 2px solid #e2e8f0;
+            background-color: #f8fafc;
+        }
+
+        .lang-btn {
+            flex: 1;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border: none;
+            background: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #4a5568;
+        }
+
+        .lang-btn.active {
+            color: #1a4a6f;
+            border-bottom: 3px solid #1a4a6f;
+            background-color: white;
+        }
+
+        .lang-btn:not(.active):hover {
+            background-color: #edf2f7;
+        }
+
+        .content {
+            padding: 30px 40px;
+        }
+
+        .lang-content {
             display: none;
-            animation: fadeSlide 0.25s ease-out;
         }
 
-        .section.active {
+        .lang-content.active {
             display: block;
         }
 
-        @keyframes fadeSlide {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: translateY(0); }
+        h2 {
+            color: #0b2b3b;
+            border-left: 5px solid #1a4a6f;
+            padding-left: 15px;
+            margin: 30px 0 15px 0;
+            font-size: 1.6rem;
         }
 
-        .chapter-title {
-            font-size: 1.7rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #0f172a 0%, #2d3a5e 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            margin-bottom: 0.5rem;
-            padding-top: 0.5rem;
+        h3 {
+            color: #2c5282;
+            margin: 25px 0 10px 0;
+            font-size: 1.3rem;
         }
 
-        .arabic-title {
-            font-size: 0.9rem;
-            color: #64748b;
-            border-right: 3px solid #94a3b8;
-            padding-right: 1rem;
-            margin-bottom: 1.8rem;
-            direction: rtl;
-            text-align: right;
-            font-weight: 500;
+        .question {
+            background-color: #eef2ff;
+            padding: 12px 18px;
+            border-radius: 10px;
+            margin: 20px 0 10px 0;
+            font-weight: bold;
+            border-left: 4px solid #1a4a6f;
         }
 
-        .block {
-            background: #ffffff;
-            border-radius: 1.2rem;
-            margin-bottom: 1.5rem;
-            padding: 1.2rem 1.5rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-            border: 1px solid #eef2ff;
+        .answer {
+            margin: 10px 0 15px 20px;
+            padding-left: 15px;
+            border-left: 2px solid #cbd5e0;
         }
 
-        .block-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: #0c4a6e;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 0.25rem;
+        .justification {
+            background-color: #f1f5f9;
+            padding: 12px 18px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 0.95rem;
+            color: #334155;
         }
 
-        .block-arabic {
-            font-size: 0.8rem;
-            color: #5b6e8c;
-            direction: rtl;
-            text-align: right;
-            border-bottom: 1px dashed #e2e8f0;
-            padding-bottom: 0.5rem;
-            margin-bottom: 0.8rem;
+        .justification strong {
+            color: #1e3a5f;
         }
 
-        .item {
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #f1f5f9;
+        .true {
+            color: #2b6e3b;
+            font-weight: bold;
         }
 
-        .item:last-child {
-            border-bottom: none;
+        .false {
+            color: #c53030;
+            font-weight: bold;
         }
 
-        .item-fr {
-            font-size: 0.9rem;
-            color: #1e293b;
-            line-height: 1.55;
-            font-weight: 480;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
         }
 
-        .item-ar {
-            font-size: 0.8rem;
-            color: #5b6e8c;
-            direction: rtl;
-            text-align: right;
-            margin-top: 0.3rem;
+        th, td {
+            border: 1px solid #cbd5e0;
+            padding: 10px 12px;
+            text-align: left;
+            vertical-align: top;
         }
 
-        .warn {
-            background: #fef9e3;
-            border-left: 5px solid #f59e0b;
-            border-radius: 0.9rem;
-            padding: 0.8rem 1.2rem;
-            margin: 1rem 0;
-            font-size: 0.85rem;
-            color: #7b4700;
+        th {
+            background-color: #e2e8f0;
+            font-weight: bold;
         }
 
-        .warn-ar {
-            font-size: 0.75rem;
-            color: #9b6b1c;
-            direction: rtl;
-            text-align: right;
-            margin-top: 0.5rem;
-        }
-
-        .formula {
-            background: #f8fafc;
-            border-radius: 1rem;
-            border: 1px solid #e2e8f0;
-            padding: 0.9rem 1.2rem;
-            margin: 0.8rem 0;
-            font-family: 'SF Mono', monospace;
-            font-size: 0.9rem;
-            color: #1e293b;
+        .footer {
+            background-color: #1a2a3a;
+            color: #94a3b8;
             text-align: center;
-            font-weight: 500;
-        }
-
-        .formula-ar {
-            font-size: 0.75rem;
-            color: #4b5563;
-            margin-top: 0.5rem;
-            direction: rtl;
-            text-align: right;
-        }
-
-        .badge {
-            display: inline-block;
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 0.2rem 0.7rem;
-            border-radius: 20px;
-            margin-right: 0.3rem;
-        }
-
-        .badge-purple { background: #e0e7ff; color: #3730a3; }
-        .badge-amber { background: #fffbeb; color: #b45309; border: 1px solid #fed7aa; }
-
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            margin: 0.6rem 0;
-        }
-
-        @media (max-width: 560px) {
-            .two-col { grid-template-columns: 1fr; }
-        }
-
-        .phase-line {
-            display: flex;
-            align-items: flex-start;
-            gap: 0.9rem;
-            padding: 0.6rem 0;
-            border-bottom: 1px solid #f0f3fa;
-        }
-
-        .phase-line:last-child {
-            border-bottom: none;
-        }
-
-        .phase-num {
-            min-width: 28px;
-            height: 28px;
-            border-radius: 30px;
-            background: #eef2ff;
-            color: #1e40af;
-            font-weight: 800;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .phase-text {
-            flex: 1;
-        }
-
-        .phase-fr {
-            font-size: 0.9rem;
-            color: #1f2a44;
-            line-height: 1.48;
-        }
-
-        .phase-ar {
-            font-size: 0.75rem;
-            color: #6c7a91;
-            direction: rtl;
-            text-align: right;
-            margin-top: 0.25rem;
-        }
-
-        .key-box {
-            background: #fefefe;
-            border-radius: 0.9rem;
-            border: 1px solid #e9edf4;
-            padding: 0.7rem 1rem;
-        }
-
-        .key-fr {
+            padding: 20px;
             font-size: 0.85rem;
-            color: #1f2a44;
-            font-weight: 500;
         }
 
-        .key-ar {
-            font-size: 0.75rem;
-            color: #65748c;
-            direction: rtl;
-            text-align: right;
-            margin-top: 0.3rem;
-        }
-
-        .divider {
-            height: 1px;
-            background: linear-gradient(90deg, #e2e8f0, #cbd5e1, #e2e8f0);
-            margin: 1rem 0;
-        }
-
-        .section-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #5b6e8c;
-            margin: 0.8rem 0 0.4rem 0;
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
         }
     </style>
 </head>
 <body>
 <div class="container">
-<h2 class="sr-only">ملخص شامل لمقرر الاقتصاد النقدي والمالي الأول</h2>
-
-<div class="tabs">
-  <button class="tab-btn active" onclick="show('intro')">📖 Intro</button>
-  <button class="tab-btn" onclick="show('ch1a')">📋 Ch.I — Formes</button>
-  <button class="tab-btn" onclick="show('ch1b')">⚙️ Ch.I — Fonctions</button>
-  <button class="tab-btn" onclick="show('ch2')">📊 Ch.II — Agrégats</button>
-  <button class="tab-btn" onclick="show('ch3')">🏦 Ch.III — Création</button>
-  <button class="tab-btn" onclick="show('ch4')">🎯 Ch.IV — Politique</button>
-</div>
-
-<!-- ========== INTRO ========== -->
-<div class="section active" id="intro">
-  <div class="chapter-title">Chapitre Introductif — La monnaie : origines, définitions, caractéristiques</div>
-  <div class="arabic-title">الفصل التمهيدي — النقود: الأصول، التعريفات، الخصائص</div>
-
-  <div class="block">
-    <div class="block-title">🔤 Étymologie du mot "monnaie"</div>
-    <div class="block-arabic">أصل كلمة "نقود"</div>
-    <div class="item"><div class="item-fr">Le mot <b>monnaie</b> vient du latin <b>« moneta »</b>, dérivé du verbe <b>« moneo »</b> qui signifie <em>avertir</em>.</div><div class="item-ar">كلمة monnaie مشتقة من اللاتينية "moneta" من الفعل "moneo" بمعنى يُحذِّر</div></div>
-    <div class="item"><div class="item-fr">L'atelier de fabrication des premières pièces se trouvait dans le temple de la déesse romaine <b>Junon</b>, surnommée <b>« Moneta »</b> (l'avertisseuse), car selon la mythologie, elle avait averti d'un tremblement de terre.</div><div class="item-ar">ورشة صنع النقود كانت داخل معبد الإلهة الرومانية "جونون" الملقبة بـ"Moneta" أي المُحذِّرة.</div></div>
-    <div class="item"><div class="item-fr">Selon P. Guiton et G. Bramoullé, l'observation de l'évolution de la valeur d'une monnaie peut avertir de l'arrivée de certaines crises.</div><div class="item-ar">حسب غيتون وبراموليه: مراقبة قيمة النقود قد تنذر بأزمات اقتصادية.</div></div>
-  </div>
-
-  <div class="block">
-    <div class="block-title">📚 Trois définitions de la monnaie</div>
-    <div class="block-arabic">التعريفات الثلاثة للنقود</div>
-    <div class="phase-line"><div class="phase-num">1</div><div class="phase-text"><div class="phase-fr"><b>Chameau :</b> « La monnaie est l'ensemble des actifs acceptés partout, par tous et en tout temps pour régler les dettes issues des échanges. » Cette définition met en avant la <b>confiance</b>.</div><div class="phase-ar">شامو: النقود مجموع الأصول المقبولة في كل مكان ومن الجميع وفي كل وقت — تُبرز فكرة الثقة.</div></div></div>
-    <div class="phase-line"><div class="phase-num">2</div><div class="phase-text"><div class="phase-fr">« La monnaie est tout moyen qui permet l'extinction d'une dette et le règlement d'un achat. » Elle confère deux pouvoirs : le <b>pouvoir d'achat</b> (économique) et le <b>pouvoir libératoire</b> (juridique, également appelé pouvoir de liquidation).</div><div class="phase-ar">النقود تمنح قوتين: القدرة الشرائية (اقتصادية) وقوة الإبراء القانونية.</div></div></div>
-    <div class="phase-line"><div class="phase-num">3</div><div class="phase-text"><div class="phase-fr"><b>F. Perroux :</b> « La monnaie est un instrument de paiement indéterminé, général et immédiat. » Cette définition tente de définir la monnaie par ses caractéristiques.</div><div class="phase-ar">بيرو: النقود أداة دفع غير محددة، عامة وفورية.</div></div></div>
-  </div>
-
-  <div class="block">
-    <div class="block-title">✅ Les quatre caractéristiques de la monnaie (Perroux)</div>
-    <div class="block-arabic">الخصائص الأربع للنقود</div>
-    <div class="two-col">
-      <div class="key-box"><div class="key-fr"><span class="badge badge-purple">1</span> <b>Obligatoire</b> : le créancier ou le vendeur ne peut refuser le paiement en monnaie.</div><div class="key-ar">إلزامية: لا يحق للدائن أو البائع رفضها.</div></div>
-      <div class="key-box"><div class="key-fr"><span class="badge badge-purple">2</span> <b>Indéterminée</b> : non limitée à une catégorie de biens, elle permet de régler n'importe quelle dette.</div><div class="key-ar">غير محددة: ليست مقيدة بنوع معين من السلع.</div></div>
-      <div class="key-box"><div class="key-fr"><span class="badge badge-purple">3</span> <b>Générale (universelle)</b> : acceptée partout et par tous dans un territoire donné.</div><div class="key-ar">عامة: مقبولة في كامل التراب من طرف الجميع.</div></div>
-      <div class="key-box"><div class="key-fr"><span class="badge badge-purple">4</span> <b>Immédiate</b> : l'extinction de la dette ou l'acquisition est instantanée, sans décalage.</div><div class="key-ar">فورية: إبراء الذمة واكتساب الملكية يكونان آنيين.</div></div>
+    <div class="header">
+        <h1>TD n°2 - Économie Monétaire et Financière I <span>Pr. Errachid Majidi</span></h1>
+        <p>Année universitaire 2025-2026 | Corrigé intégral basé sur le cours (pages référencées)</p>
     </div>
-    <div class="warn">Ces quatre caractéristiques confèrent à la monnaie un <b>caractère institutionnel</b> : émise par une institution solide, elle organise les rapports économiques.<div class="warn-ar">طابع مؤسسي: تُصدرها مؤسسة راسخة وتنظّم العلاقات الاقتصادية.</div></div>
-  </div>
 
-  <div class="block">
-    <div class="block-title">🔄 Du troc à la monnaie — L'exemple de Clower (1969)</div>
-    <div class="block-arabic">من المقايضة إلى النقود</div>
-    <div class="item"><div class="item-fr">Dans une économie de troc, l'échange nécessite la <b>double coïncidence des désirs</b> : A doit vouloir ce que B possède et, simultanément, B doit vouloir ce que A possède.</div><div class="item-ar">اقتصاد المقايضة يستلزم التوافق المزدوج للرغبات.</div></div>
-    <div class="item"><div class="item-fr"><b>Coûts de transaction</b> : fatigue, temps perdu, incertitude. <b>Coûts d'attente</b> : frustration, stockage, gardiennage (particulièrement lourds pour les biens périssables).</div><div class="item-ar">تكاليف المعاملات والانتظار.</div></div>
-    <div class="item"><div class="item-fr">L'apparition de la <b>monnaie marchandise</b> brise le troc. Chaque individu échange son surplus contre ce bien intermédiaire, qui devient <b>l'équivalent général</b> : il exprime la valeur d'échange de toutes les autres marchandises.</div><div class="item-ar">ظهور نقود-السلعة: المكافئ العام.</div></div>
-    <div class="warn"><b>Avantage mathématique clé :</b> Sans monnaie, une économie de n biens comporte n(n−1)/2 prix relatifs. Avec la monnaie, on n’a plus que (n−1) prix absolus. Exemple pour trois biens : trois prix relatifs sans monnaie, deux prix absolus avec la monnaie.<div class="warn-ar">الميزة الرياضية: بدون نقود n(n−1)/2 سعر نسبي، مع النقود (n−1) سعر مطلق فقط.</div></div>
-  </div>
-</div>
+    <div class="lang-tabs">
+        <button class="lang-btn active" id="btn-fr">🇫🇷 Français (Complet)</button>
+        <button class="lang-btn" id="btn-ar">🇲🇦 العربية (كامل)</button>
+    </div>
 
-<!-- ========== CHAPITRE I — FORMES ========== -->
-<div class="section" id="ch1a">
-  <div class="chapter-title">Chapitre I — Section I : Les formes de la monnaie</div>
-  <div class="arabic-title">الفصل الأول — القسم الأول: أشكال النقود</div>
+    <div class="content">
+        <!-- ==================== FRANÇAIS COMPLET ==================== -->
+        <div id="content-fr" class="lang-content active">
+            <h2>I. Pour chacune des phrases suivantes, choisissez la ou les bonnes propositions</h2>
 
-  <div class="block">
-    <div class="block-title">🪙 A. La monnaie marchandise</div>
-    <div class="block-arabic">نقود-السلعة</div>
-    <div class="item"><div class="item-fr">Bien qui brise le troc en intervenant réellement dans les échanges, choisi pour ses qualités : facilement reconnaissable (donc difficilement falsifiable), accepté par toute la communauté, relativement rare, divisible, et inspirant la confiance.</div><div class="item-ar">خصائص: سهلة التعرف، مقبولة من الجميع، نادرة، قابلة للتجزئة، تبعث الثقة.</div></div>
-    <div class="section-label">Exemples historiques</div>
-    <div class="item"><div class="item-fr">🐄 Bœuf (Égypte antique, Rome) · 🌾 Épi d'orge (Mésopotamie) · 🍃 Feuille de thé · 🚬 Tabac (Virginie) · 🐚 Cauri (Chine) · 🪓 Hache, hameçon · 🧂 Sel (Incas, Rome → à l'origine du mot « salaire »).</div><div class="item-ar">الثور، الشعير، أوراق الشاي، التبغ، أصداف الكاوري، الملح (أصل كلمة أجر).</div></div>
-    <div class="warn">La cigarette a joué le rôle de monnaie marchandise après la Seconde Guerre mondiale en Allemagne et en Grèce (monnaie refuge après l'hyperinflation).<div class="warn-ar">السجارة لعبت دور نقود-السلعة بعد الحرب العالمية الثانية.</div></div>
-  </div>
+            <!-- Question 1 -->
+            <div class="question">1. Parmi les opérations suivantes, celles qui peuvent être considérées comme des opérations de création monétaire sont :</div>
+            <div class="answer">
+                ✅ <strong>B</strong> – Le Trésor public règle les salaires des fonctionnaires qui ont un compte chez lui.<br>
+                ✅ <strong>C</strong> – Une société exportatrice reçoit sur son compte la somme de 50 000 euros en contrepartie de produits agricoles qu’elle a exportés.
+                <div class="justification">
+                    <strong>📖 Justification (pages 21-22) :</strong><br>
+                    • <strong>B</strong> (p.25) : "Le Trésor public crée de la monnaie lorsqu'il crédite un compte à vue pour payer un fonctionnaire qui a un compte chez lui."<br>
+                    • <strong>C</strong> (p.22) : "L'entrée de devises constitue la deuxième source la plus importante de création monétaire. Lorsqu'une entreprise résidente exporte, elle crée une nouvelle quantité de monnaie."<br>
+                    ❌ <strong>A</strong> (p.21) : "Toute opération qui lie un agent financier avec un autre agent financier ne peut donner lieu à une création monétaire."<br>
+                    ❌ <strong>D</strong> (p.22) : "La sortie de devise est une destruction monétaire."<br>
+                    ❌ <strong>E</strong> : Faux car B et C sont correctes.
+                </div>
+            </div>
 
-  <div class="block">
-    <div class="block-title">🥇 B. La monnaie métallique et le bimétallisme</div>
-    <div class="block-arabic">النقود المعدنية وازدواجية المعدن</div>
-    <div class="item"><div class="item-fr">Les métaux (or, argent) possèdent trois qualités essentielles soulignées par Malthus dès 1820 : la divisibilité, l'inaltérabilité et la malléabilité. Premières pièces : Grecs au VIIe siècle av. J.-C. dans le royaume de Lydie.</div><div class="item-ar">المعادن: قابلية التقسيم، عدم التلف، سهولة التشكيل. أولى القطع: مملكة ليديا.</div></div>
-    <div class="phase-line"><div class="phase-num">1</div><div class="phase-text"><div class="phase-fr"><b>Monnaie pesée</b> : l'or et l'argent circulent sans poids ni forme fixe ; on les pèse avant chaque transaction.</div><div class="phase-ar">النقود الموزونة.</div></div></div>
-    <div class="phase-line"><div class="phase-num">2</div><div class="phase-text"><div class="phase-fr"><b>Monnaie comptée</b> : poids et forme prédéfinis, fractionnée en pièces, lingots ou boules.</div><div class="phase-ar">النقود المعدودة.</div></div></div>
-    <div class="phase-line"><div class="phase-num">3</div><div class="phase-text"><div class="phase-fr"><b>Monnaie frappée</b> : apposition d'un signe distinctif et de la valeur en poids. La frappe, d'abord privée, est rapidement monopolisée par les autorités (symbole de souveraineté).</div><div class="phase-ar">النقود المسكوكة.</div></div></div>
-    <div class="divider"></div>
-    <div class="section-label">Bimétallisme et loi de Gresham</div>
-    <div class="item"><div class="item-fr">Le <b>bimétallisme</b> (deux monnaies métalliques, or et argent, ayant cours légal) a été instauré en France par Napoléon Bonaparte en 1803. Trois caractéristiques : rapport légal fixe entre l'or et l'argent, frappe libre, pouvoir libératoire illimité. Le rapport officiel était de 1 gramme d'or pour 15,5 grammes d'argent.</div><div class="item-ar">نظام المعدنين: نسبة قانونية ثابتة 1غ ذهب = 15,5غ فضة.</div></div>
-    <div class="item"><div class="item-fr">Cependant, la valeur commerciale de l'or et de l'argent fluctue selon l'abondance ou la pénurie. Un phénomène psychologique apparaît : les gens préfèrent thésauriser la monnaie dont la valeur augmente (la « bonne » monnaie) et utiliser pour les paiements celle qui se déprécie (la « mauvaise » monnaie).</div><div class="item-ar">القيمة التجارية تتذبذب → الأفراد يحتفظون بالعملة الصاعدة ويستخدمون المنخفضة.</div></div>
-    <div class="warn"><b>⚠️ Loi de Gresham : « La mauvaise monnaie chasse la bonne. »</b> Dans un système bimétallique, la monnaie surévaluée (mauvaise) tend à rester en circulation, tandis que l'autre est thésaurisée. Ceci a conduit à l'abandon du bimétallisme au profit du <b>monométallisme</b> (un seul métal-étalon, généralement l'or à la fin du XIXe siècle).<div class="warn-ar">⚠️ قانون غريشام: "النقود الرديئة تطرد الجيدة." → نهاية ازدواجية المعدن وغلبة معدن واحد.</div></div>
-    <div class="item"><div class="item-fr">Aujourd'hui, on parle de <b>monnaie divisionnaire</b> car sa valeur faciale est supérieure à sa valeur intrinsèque (la valeur réelle des métaux qui la composent).</div><div class="item-ar">اليوم: النقود التقسيمية (القيمة الاسمية أعلى من الحقيقية).</div></div>
-  </div>
+            <!-- Question 5 -->
+            <div class="question">5. Dans la politique monétaire, l’objectif privilégié par les autorités monétaires est actuellement :</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – La stabilité des prix.<br>
+                ✅ <strong>D</strong> – La lutte contre l’inflation.
+                <div class="justification">
+                    <strong>📖 Justification (p.31) :</strong><br>
+                    "De nos jours, les autorités monétaires se concentrent beaucoup plus sur le premier objectif [la stabilité des prix]. Préserver le pouvoir d’achat des agents économiques en luttant contre l’inflation semble être prioritaire."<br>
+                    ❌ <strong>A et B</strong> : La croissance et le plein emploi sont des objectifs finals mais moins prioritaires.
+                </div>
+            </div>
 
-  <div class="block">
-    <div class="block-title">💵 C. La monnaie fiduciaire (papier)</div>
-    <div class="block-arabic">النقود الائتمانية</div>
-    <div class="item"><div class="item-fr"><b>Fiducia</b> (latin) signifie confiance. La monnaie fiduciaire repose sur la confiance en son émetteur (banque centrale aujourd'hui, banques privées autrefois). Elle a peu ou pas de valeur intrinsèque.</div><div class="item-ar">الثقة أساس النقود الورقية.</div></div>
-    <div class="item"><div class="item-fr">Les premières formes apparaissent en Chine. En Occident, l'évolution comporte trois phases historiques :</div><div class="item-ar">أولى الأشكال في الصين. في الغرب: تطور عبر 3 مراحل.</div></div>
-    <div class="phase-line"><div class="phase-num">1</div><div class="phase-text"><div class="phase-fr"><b>Antiquité/Moyen Âge</b> : les particuliers déposent les métaux précieux chez les orfèvres (bijoutiers) et reçoivent des certificats représentatifs. Le montant des certificats est strictement égal au stock de métaux déposés ; il ne s'agit pas encore de vraie monnaie fiduciaire.</div><div class="phase-ar">العصور القديمة/الوسطى: شهادات تمثيلية بقيمة المعادن المودعة فقط.</div></div></div>
-    <div class="phase-line"><div class="phase-num">2</div><div class="phase-text"><div class="phase-fr"><b>Naissance de la monnaie fiduciaire</b> : les émetteurs mettent en circulation un volume de billets supérieur à la quantité de métal précieux effectivement détenue en réserve. Ce mécanisme repose sur la confiance : on suppose que l'ensemble des déposants ne se présentera pas simultanément pour demander la conversion de leurs billets en métal. Les principaux acteurs sont les orfèvres londoniens « Goldsmith », le banquier écossais John Law, et le banquier suédois Johan Palmstruch. Ce dernier, fondateur de la Banque de Stockholm en 1656, est autorisé à émettre des billets contre remise de monnaie métallique en cuivre (très lourde). Ayant ensuite reçu l'autorisation d'émettre plus de billets que de métal conservé, le billet se détache définitivement de la monnaie métallique : c'est la naissance de la monnaie papier.</div><div class="phase-ar">ميلاد النقود الائتمانية: إصدار أوراق أكثر من المعدن. الفاعلون: الصاغة اللندنيون، جون لو، يوهان بالمستروش. انفصال الورقة عن المعدن = ولادة النقود الورقية.</div></div></div>
-    <div class="phase-line"><div class="phase-num">3</div><div class="phase-text"><div class="phase-fr"><b>Cours forcé</b> : le billet n'est plus convertible en métal et ne peut être refusé. Rupture définitive en 1971, lorsque le président Nixon met fin à la convertibilité du dollar en or.</div><div class="phase-ar">الإجبارية القانونية: 1971، نيكسون يُنهي تحويل الدولار إلى ذهب.</div></div></div>
-  </div>
+            <!-- Question 6 -->
+            <div class="question">6. Parmi les instruments de la politique monétaire, celui qui est privilégié actuellement par la banque centrale au Maroc est :</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – L’intervention dans le marché interbancaire.<br>
+                ✅ <strong>D</strong> – La réserve obligatoire.
+                <div class="justification">
+                    <strong>📖 Justification (p.32-34) :</strong><br>
+                    • (p.32-33) : "Les moyens d’intervention privilégiés de la banque centrale sur le marché interbancaire sont l’open market et les pensions."<br>
+                    • (p.33) : "La politique de réserve obligatoire est devenue un instrument de la politique monétaire."<br>
+                    ❌ <strong>A</strong> (p.34) : "L'encadrement du crédit a été abandonné au Maroc en 1991."<br>
+                    ❌ <strong>B</strong> : Le réescompte est utilisé mais moins privilégié.
+                </div>
+            </div>
 
-  <div class="block">
-    <div class="block-title">📝 D. La monnaie scripturale et ses instruments</div>
-    <div class="block-arabic">النقود الكتابية وأدوات التداول</div>
-    <div class="item"><div class="item-fr"><b>Scriptura</b> (latin) signifie écriture. La monnaie scripturale se compose de simples jeux d'écritures dans les comptes bancaires. On distingue les dépôts à vue (retirables à tout moment) et les dépôts à terme (bloqués jusqu'à échéance). Ses qualités sont la sécurité, la simplicité et la sûreté.</div><div class="item-ar">قيود محاسبية، ودائع تحت الطلب وأجل، ميزات: الأمان، البساطة، الموثوقية.</div></div>
-    <div class="section-label">Les quatre instruments de circulation (supports, non la monnaie elle-même)</div>
-    <div class="item"><div class="item-fr">📄 <b>Chèque</b> : écrit par lequel le titulaire d'un compte demande à sa banque de payer une somme au bénéficiaire. Il doit comporter le montant en lettres et en chiffres, le nom du bénéficiaire et la signature de l'émetteur.</div><div class="item-ar">الشيك: أمر كتابي بالدفع للمستفيد.</div></div>
-    <div class="item"><div class="item-fr">🔄 <b>Virement</b> : ordre donné à la banque de transférer un montant déterminé sur le compte d'un bénéficiaire.</div><div class="item-ar">التحويل: نقل مبلغ إلى حساب المستفيد.</div></div>
-    <div class="item"><div class="item-fr">💳 <b>Carte bancaire</b> : elle débite le compte du titulaire et crédite celui du commerçant ; elle permet aussi les retraits en espèces aux distributeurs automatiques.</div><div class="item-ar">البطاقة البنكية: خصم وإضافة، وسحب النقد.</div></div>
-    <div class="item"><div class="item-fr">📋 <b>Avis de prélèvement</b> : autorisation donnée par le payeur à sa banque d'effectuer des prélèvements périodiques (généralement mensuels) au profit d'un créancier.</div><div class="item-ar">الأمر بالخصم: خصم دوري لصالح دائن.</div></div>
-    <div class="warn">Ces instruments ne sont pas la monnaie elle-même ; ils ne font que faciliter la circulation de la monnaie scripturale.<div class="warn-ar">هذه الأدوات ليست نقودًا، بل وسائل لتداول النقود الكتابية.</div></div>
-  </div>
+            <h2>II. Pour chacune des propositions suivantes, dites si c’est vrai ou faux en justifiant</h2>
 
-  <div class="block">
-    <div class="block-title">💻 E. La monnaie électronique</div>
-    <div class="block-arabic">النقود الإلكترونية</div>
-    <div class="item"><div class="item-fr">Ensemble de techniques informatiques et électroniques permettant l'échange de fonds sans support papier, via une relation tripartite entre banques, créanciers et consommateurs. Deux formes : le porte-monnaie électronique (carte prépayée) et la monnaie virtuelle (logiciels de paiement sur internet, réserve stockée sur ordinateur).</div><div class="item-ar">محفظة إلكترونية، نقود افتراضية.</div></div>
-    <div class="warn">C'est par abus de langage qu'on parle de « monnaie électronique » : ces instruments nécessitent l'existence d'un compte bancaire à vue (monnaie scripturale) ; ils ne sont que des supports de celle-ci.<div class="warn-ar">⚠️ هذا المصطلح مجازي: هذه الأدوات تستلزم حسابًا بنكيًا تحت الطلب.</div></div>
-  </div>
-</div>
+            <div class="question">1. Lorsqu’un client d’une banque commerciale verse la somme de 5000 dh dans son compte bancaire, il ne s’agit pas d’une création monétaire.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.21 :</strong> "Le dépôt ou le retrait de billets par un agent non financier ne peut être considéré comme une création monétaire car il s’agit seulement d’une transformation de la forme monétaire (de fiduciaire à scripturale ou inversement) qui n’a aucun impact sur la capacité de dépense des ANFR."</div>
+            </div>
 
-<!-- ========== CHAPITRE I — FONCTIONS ========== -->
-<div class="section" id="ch1b">
-  <div class="chapter-title">Chapitre I — Section II : Les fonctions de la monnaie</div>
-  <div class="arabic-title">الفصل الأول — القسم الثاني: وظائف النقود</div>
-  <div class="block"><div class="block-title">📜 Depuis Aristote — trois fonctions</div><div class="item"><div class="item-fr">Aristote a probablement été le premier à lier la monnaie à ses fonctions : « Parfois la monnaie semble être une pure futilité, un pur rien, car si ceux qui s'en servent abandonnent une monnaie pour une autre, elle devient sans valeur et sans utilité pour les nécessités de la vie. »</div><div class="item-ar">أرسطو أول من ربط النقود بوظائفها.</div></div><div class="warn">Règle fondamentale : sera monnaie l'objet économique qui remplit les trois fonctions. Si l'une d'elles manque, il ne s'agit plus d'une monnaie proprement dite.<div class="warn-ar">القاعدة: أي شيء يؤدي الوظائف الثلاث يُعدّ نقدًا.</div></div></div>
-  <div class="block"><div class="block-title">🔄 1. Intermédiaire des échanges (la plus importante)</div><div class="item"><div class="item-fr">Cette fonction, également appelée moyen ou instrument de paiement, brise le troc en le divisant en deux opérations : bien A contre monnaie, puis monnaie contre bien B. Elle supprime la nécessité de la double coïncidence des désirs et confère à la monnaie son pouvoir libératoire. La monnaie agit comme « l'huile dans les rouages » de l'économie.</div><div class="item-ar">وسيط المبادلات: يكسر المقايضة، يلغي التوافق المزدوج، يمنح قوة الإبراء.</div></div><div class="warn">La fonction d'unité de compte a pu exister avec le troc (monnaie abstraite). En revanche, la fonction d'intermédiaire des échanges marque la naissance de l'économie monétaire, ce qui la rend la plus importante.<div class="warn-ar">وظيفة الوساطة هي التي أنشأت الاقتصاد النقدي، لهذا تُعدّ الأهم.</div></div></div>
-  <div class="block"><div class="block-title">📏 2. Unité de compte (première chronologiquement)</div><div class="item"><div class="item-fr">La monnaie constitue un étalon de mesure de la valeur des biens, au même titre que le mètre mesure les longueurs. Elle permet de passer des prix relatifs (n(n−1)/2 dans une économie de n biens) aux prix absolus (n−1 seulement). Elle autorise des comparaisons dans l'espace (entre différents marchés) et dans le temps (évolution des prix).</div><div class="item-ar">وحدة الحساب: تبسيط نظام الأسعار، مقارنات في المكان والزمان.</div></div><div class="warn">Chronologiquement, c'est la première fonction monétaire : on a trouvé des traces de monnaie abstraite, imaginaire, qui n'existait pas physiquement mais qui jouait uniquement le rôle d'unité de compte.<div class="warn-ar">أول وظيفة زمنيًا: نقود مجردة/خيالية لعبت دور وحدة الحساب فقط.</div></div></div>
-  <div class="block"><div class="block-title">💾 3. Réserve de valeur</div><div class="item"><div class="item-fr">La monnaie a la capacité de préserver sa valeur dans le temps entre deux transactions. Contrairement au troc (transactions instantanées), elle peut être conservée pour une utilisation ultérieure, reportant ainsi le pouvoir d'achat. Keynes souligne que la monnaie constitue un lien entre le présent et l'avenir. Sa qualité supplémentaire par rapport à d'autres biens (or, immeubles) est sa liquidité : elle est immédiatement disponible et utilisable dans les règlements.</div><div class="item-ar">مخزن للقيمة: تحتفظ بقيمتها مع الوقت، كينز: النقود رابط بين الحاضر والمستقبل، سيولة فورية.</div></div></div>
-</div>
+            <div class="question">2. Lorsque le Trésor public paie les salaires des fonctionnaires qui ont des comptes auprès des banques commerciales, il s’agit d’une création monétaire.</div>
+            <div class="answer"><span class="false">✘ FAUX</span>
+                <div class="justification"><strong>p.25 :</strong> "Le Trésor public crée de la monnaie lorsqu'il crédite un compte à vue pour payer un fonctionnaire qui a un compte chez lui. Si le fonctionnaire a un compte en banque commerciale, le paiement sort du circuit du Trésor et ne constitue pas une création monétaire par le Trésor."</div>
+            </div>
 
-<!-- ========== CHAPITRE II — AGRÉGATS ========== -->
-<div class="section" id="ch2">
-  <div class="chapter-title">Chapitre II — La masse monétaire et ses agrégats</div>
-  <div class="arabic-title">الفصل الثاني — الكتلة النقدية ومجمعاتها</div>
-  <div class="block"><div class="block-title">📌 Définition et principes généraux</div><div class="item"><div class="item-fr"><b>Masse monétaire</b> : quantité de monnaie en circulation dans une économie, c'est-à-dire la capacité de dépense des agents non financiers résidents (ANFR). Les agrégats excluent les avoirs des non‑résidents, de la banque centrale, des banques commerciales et de l'administration centrale.</div><div class="item-ar">الكتلة النقدية = قدرة الإنفاق للفاعلين غير الماليين المقيمين.</div></div><div class="item"><div class="item-fr">L'enjeu principal est de s'assurer que la quantité de monnaie est suffisante pour financer les transactions sans freiner la croissance et sans créer d'inflation.</div><div class="item-ar">الهدف: تمويل المعاملات دون إعاقة النمو أو إحداث تضخم.</div></div></div>
-  <div class="block"><div class="block-title">🇲🇦 Agrégats monétaires (Bank Al-Maghrib, normes FMI)</div>
-    <div class="item"><div class="item-fr"><b>M1</b> : monnaie divisionnaire (pièces), monnaie fiduciaire (billets détenus par les ANFR) et monnaie scripturale (comptes créditeurs à vue).</div><div class="item-ar">م1: النقود التقسيمية + الائتمانية + الكتابية.</div></div>
-    <div class="item"><div class="item-fr"><b>M2</b> : M1 augmenté des placements à vue rémunérés non mobilisables par chèque (comptes sur carnets des banques, livrets de la Caisse d'épargne nationale).</div><div class="item-ar">م2 = م1 + توظيفات تحت الطلب مدرة للفائدة.</div></div>
-    <div class="item"><div class="item-fr"><b>M3</b> : M2 augmenté des placements à terme émis par les banques (comptes à terme, bons à échéance fixe, certificats de dépôts, valeurs données en pension, dépôts en devises, dépôts à terme auprès du Trésor, titres d'OPCVM monétaires). Bank Al-Maghrib utilise M3 pour mesurer la masse monétaire car il inclut la monnaie au sens étroit (M1) et la quasi‑monnaie (actifs facilement convertibles en moyens de paiement sans risque de perte en capital).</div><div class="item-ar">م3 = م2 + التوظيفات لأجل: الحسابات لأجل، شهادات الإيداع، OPCVM النقدية.</div></div>
-  </div>
-  <div class="block"><div class="block-title">📈 Agrégats de placements liquides (depuis 1998)</div><div class="item"><div class="item-fr"><b>PL1</b> : titres d'OPCVM contractuels, titres de créances négociables émis par le Trésor public et les sociétés de financement, bons du Trésor, bons de sociétés de financement, billets de trésorerie.<br><b>PL2</b> : titres émis par les OPCVM obligations.<br><b>PL3</b> : titres émis par les OPCVM actions et OPCVM diversifiés.</div><div class="item-ar">PL1، PL2، PL3: مجمعات التوظيفات السائلة.</div></div><div class="formula">Liquidité de l'économie = Agrégats monétaires (M3) + Agrégats de placements liquides (PL1 + PL2 + PL3)<div class="formula-ar">سيولة الاقتصاد = المجمعات النقدية + مجمعات التوظيفات السائلة.</div></div></div>
-  <div class="block"><div class="block-title">⚡ Vitesse de circulation de la monnaie (VCM) et taux de liquidité</div><div class="item"><div class="item-fr">La VCM mesure le nombre de paiements qu'effectue une unité monétaire au cours d'une année (fréquence à laquelle la monnaie change de main). Elle se calcule approximativement par le rapport du PIB à M3. Exemple : une VCM de 18 signifie qu'un dirham a permis 18 transactions dans l'année, soit un changement de main tous les 20 jours (360 jours divisés par 18). Le taux de liquidité de l'économie est l'inverse : M3 divisé par le PIB.</div><div class="item-ar">سرعة التداول = الناتج المحلي الإجمالي ÷ م3. معدل السيولة = م3 ÷ الناتج المحلي.</div></div></div>
-</div>
+            <div class="question">3. La banque centrale a un rôle fondamental dans la création monétaire.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.26 :</strong> "La Banque centrale a un double rôle (...) un rôle direct marginal, et un rôle indirect primordial. Elle contrôle le pouvoir de création monétaire des banques commerciales via le contrôle de la liquidité bancaire et a le monopole de l'émission des billets."</div>
+            </div>
 
-<!-- ========== CHAPITRE III — CRÉATION MONÉTAIRE ========== -->
-<div class="section" id="ch3">
-  <div class="chapter-title">Chapitre III — La création monétaire</div>
-  <div class="arabic-title">الفصل الثالث — خلق النقود</div>
-  <div class="block"><div class="block-title">📌 Définition et deux caractéristiques</div><div class="item"><div class="item-fr">La <b>création monétaire</b> est un accroissement de la masse monétaire, c'est-à-dire une augmentation du pouvoir d'achat détenu par les agents non financiers résidents. Une opération de création monétaire doit satisfaire deux conditions : (1) elle lie un agent financier (banque) à un agent non financier résident ; (2) elle augmente le pouvoir d'achat global des ANFR (et non pas seulement celui d'un agent au détriment d'un autre). Le dépôt ou le retrait de billets n'est qu'une transformation de forme (fiduciaire contre scripturale) et ne constitue donc pas une création monétaire.</div><div class="item-ar">خلق النقود = زيادة الكتلة النقدية والقدرة الشرائية الإجمالية للفاعلين غير الماليين.</div></div></div>
-  <div class="block"><div class="block-title">💰 Les cinq sources de création monétaire</div>
-    <div class="section-label">Deux sources principales</div>
-    <div class="phase-line"><div class="phase-num" style="background:#C0DD97;color:#173404">1</div><div class="phase-text"><div class="phase-fr"><b>L'octroi de crédit par les banques commerciales</b> (source numéro un) : création ex nihilo (à partir de rien) par simple jeu d'écriture. Les crédits font les dépôts. Le remboursement du crédit donne lieu à une destruction monétaire.</div><div class="phase-ar">منح القروض (المصدر الأول) — خلق من العدم، القروض تصنع الودائع.</div></div></div>
-    <div class="phase-line"><div class="phase-num" style="background:#C0DD97;color:#173404">2</div><div class="phase-text"><div class="phase-fr"><b>L'entrée de devises</b> (exportations, transferts des non‑résidents, dépenses des touristes). La conversion des devises en monnaie nationale ajoute une nouvelle quantité à la masse monétaire. La sortie de devises, à l'inverse, détruit de la monnaie.</div><div class="phase-ar">تدفق العملات الأجنبية — الصادرات، التحويلات، السياح.</div></div></div>
-    <div class="section-label">Trois sources secondaires</div>
-    <div class="phase-line"><div class="phase-num">3</div><div class="phase-text"><div class="phase-fr">Achat par une banque commerciale d'un titre financier émis par un ANFR (entreprise, bons du Trésor).</div><div class="phase-ar">شراء سند مالي من فاعل غير مالي مقيم.</div></div></div>
-    <div class="phase-line"><div class="phase-num">4</div><div class="phase-text"><div class="phase-fr">Achat par une banque commerciale d'un bien physique auprès d'un ANFR.</div><div class="phase-ar">شراء أصل مادي من فاعل غير مالي.</div></div></div>
-    <div class="phase-line"><div class="phase-num">5</div><div class="phase-text"><div class="phase-fr">Règlements du Trésor public aux fonctionnaires et fournisseurs de l'État qui possèdent des comptes gérés par lui (jeux d'écritures internes).</div><div class="phase-ar">مدفوعات الخزينة للموظفين/الموردين بحسابات لديها.</div></div></div>
-  </div>
-  <div class="block"><div class="block-title">🏛️ Les trois acteurs de la création monétaire</div>
-    <div class="item"><div class="item-fr"><b>Banques commerciales</b> : rôle primordial. Elles accordent des crédits ex nihilo, convertissent les devises, achètent des titres financiers et des actifs physiques. Leur pouvoir est limité par trois facteurs : (1) elles ne peuvent pas créer les billets (monopole de la banque centrale, « monnaie centrale ») ; (2) elles subissent des fuites en monnaie centrale (la monnaie prêtée peut être transformée en billets ou transférée à une autre banque) ; (3) elles doivent constituer une réserve obligatoire (un pourcentage des dépôts bloqué à la banque centrale). Pour se refinancer, une banque s'adresse d'abord au marché interbancaire, puis, si nécessaire, à la banque centrale (prêteur en dernier ressort) via le réescompte (cession définitive) ou la mise en pension (cession temporaire).</div><div class="item-ar">البنوك التجارية: دور محوري لكن محدود بالاحتياطي الإلزامي والتسرّبات.</div></div>
-    <div class="item"><div class="item-fr"><b>Trésor public</b> : double pouvoir monétaire. Direct : lorsqu'il crédite les comptes de ses fonctionnaires ou fournisseurs. Indirect : lorsqu'une banque commerciale achète ses bons du Trésor (création monétaire pour le Trésor).</div><div class="item-ar">الخزينة العامة: قوة نقدية مباشرة وغير مباشرة.</div></div>
-    <div class="item"><div class="item-fr"><b>Banque centrale</b> : rôle direct marginal (conversion des devises, avances au Trésor, souscription aux bons du Trésor). Rôle indirect primordial : monopole d'émission des billets, ce qui lui permet de contrôler la monnaie centrale (liquidité bancaire) et, par là, le pouvoir de création monétaire des banques commerciales.</div><div class="item-ar">البنك المركزي: احتكار إصدار الأوراق، يتحكم في السيولة البنكية.</div></div>
-  </div>
-  <div class="block"><div class="block-title">🔢 La liquidité bancaire et ses facteurs</div>
-    <div class="item"><div class="item-fr">La liquidité d'une banque se compose des billets dans ses caisses et de ses avoirs dans son compte courant à la banque centrale. La liquidité bancaire globale (ensemble du système) est la somme de ces éléments pour toutes les banques. Quatre facteurs influencent la liquidité bancaire :</div><div class="item-ar">السيولة البنكية: الأوراق + الأرصدة لدى البنك المركزي.</div></div>
-    <div class="phase-line"><div class="phase-num">1</div><div class="phase-text"><div class="phase-fr"><b>Billets en circulation</b> : les dépôts augmentent la liquidité, les retraits la diminuent (facteur échappant au contrôle de la banque centrale).</div><div class="phase-ar">الأوراق المتداولة: خارج سيطرة البنك المركزي.</div></div></div>
-    <div class="phase-line"><div class="phase-num">2</div><div class="phase-text"><div class="phase-fr"><b>Opérations avec l'extérieur</b> : les échanges excédentaires (entrée de devises) augmentent la liquidité ; les échanges déficitaires la diminuent (facteur échappant au contrôle de la banque centrale).</div><div class="phase-ar">العمليات مع الخارج: خارج سيطرة البنك المركزي.</div></div></div>
-    <div class="phase-line"><div class="phase-num">3</div><div class="phase-text"><div class="phase-fr"><b>Opérations avec l'administration centrale (Trésor public)</b> : lorsque les paiements des clients des banques au Trésor dépassent les versements du Trésor, la liquidité baisse ; l'inverse l'augmente (facteur échappant au contrôle de la banque centrale).</div><div class="phase-ar">العمليات مع الخزينة: خارج سيطرة البنك المركزي.</div></div></div>
-    <div class="phase-line"><div class="phase-num">4</div><div class="phase-text"><div class="phase-fr"><b>Réserves obligatoires</b> : les banques doivent maintenir à la banque centrale un pourcentage de leurs dépôts (taux fixé par la banque centrale). Une hausse du taux réduit la liquidité bancaire, une baisse l'augmente. C'est le <b>seul facteur sous le contrôle direct de la banque centrale</b>.</div><div class="phase-ar">الاحتياطيات الإلزامية: العامل الوحيد الخاضع لسيطرة البنك المركزي.</div></div></div>
-  </div>
-  <div class="block"><div class="block-title">✖️ Le multiplicateur de crédit</div>
-    <div class="item"><div class="item-fr">La banque centrale peut contrôler l'évolution de la masse monétaire en contrôlant la base monétaire (billets en circulation). La masse monétaire est un multiple de la base monétaire (variable exogène). Exemple : un taux de réserve obligatoire de 20 pour cent, un dépôt initial de 1000. La première banque retient 200 (réserves) et prête 800. Ce montant circule et devient un dépôt dans une seconde banque, qui retient 160 et prête 640, et ainsi de suite. Au total, le système bancaire crée 5000. La base monétaire de 1000 a été multipliée par 5 pour obtenir une masse monétaire de 5000. Formellement, si b est le pourcentage des dépôts convertis en billets et r le taux de réserve obligatoire, le multiplicateur est égal à (b+1) divisé par (b+r).</div><div class="item-ar">مضاعف الائتمان: الكتلة = مضاعف القاعدة النقدية.</div></div>
-    <div class="warn">Exemple chiffré : taux de réserve obligatoire de 20 pour cent, dépôt initial de 1000 unités. La banque 1 conserve 200 pour la réserve et accorde un prêt de 800. La banque 2 reçoit 800, conserve 160 et prête 640. La banque 3 reçoit 640, conserve 128 et prête 512. Le processus continue jusqu'à une création totale de 5000 unités. Le multiplicateur est donc de 5.<div class="warn-ar">مثال: نسبة احتياطي 20%، وديعة أولى 1000 → إجمالي 5000، مضاعف = 5.</div></div>
-  </div>
-  <div class="block"><div class="block-title">➗ Le diviseur</div><div class="item"><div class="item-fr">Logique inverse du multiplicateur. Les banques commerciales n'attendent pas d'avoir des liquidités pour accorder des crédits ; elles créent d'abord la monnaie scripturale, puis se refinancent auprès de la banque centrale. La masse monétaire est alors une variable endogène (déterminée par la demande des ANFR). C'est la base monétaire qui est une division de la masse monétaire : BM = MM / k.</div><div class="item-ar">القاسم: الكتلة النقدية متغير داخلي، القاعدة = الكتلة ÷ k.</div></div></div>
-</div>
+            <div class="question">4. La croissance économique est un objectif intermédiaire de la politique monétaire.</div>
+            <div class="answer"><span class="false">✘ FAUX</span>
+                <div class="justification"><strong>p.31 :</strong> "On distingue deux types d’objectifs : les objectifs finals et les objectifs intermédiaires. La croissance économique fait partie des objectifs finals au même titre que la stabilité des prix, l'équilibre externe et le plein emploi."</div>
+            </div>
 
-<!-- ========== CHAPITRE IV — POLITIQUE MONÉTAIRE ========== -->
-<div class="section" id="ch4">
-  <div class="chapter-title">Chapitre IV — La politique monétaire</div>
-  <div class="arabic-title">الفصل الرابع — السياسة النقدية</div>
-  <div class="block"><div class="block-title">🎯 Définition et objectifs finals (carré magique de Kaldor)</div><div class="item"><div class="item-fr"><b>Politique monétaire</b> : ensemble des moyens mis en œuvre par les autorités monétaires pour maintenir le stock de monnaie en circulation à un niveau compatible avec la sauvegarde des équilibres internes et externes. Les quatre objectifs finals sont : (1) la stabilité des prix (taux d'inflation nul, objectif prioritaire des banques centrales aujourd'hui), (2) l'équilibre externe, (3) la croissance économique, (4) le plein emploi.</div><div class="item-ar">السياسة النقدية: الحفاظ على التوازنات الداخلية والخارجية. الأهداف: استقرار الأسعار، التوازن الخارجي، النمو، التشغيل الكامل.</div></div></div>
-  <div class="block"><div class="block-title">🎯 Objectifs intermédiaires</div><div class="item"><div class="item-fr">Un objectif intermédiaire est un agrégat sur lequel les autorités monétaires ont une influence directe et qui est relié à un objectif final. On en distingue trois : (1) la masse monétaire (objectif quantitatif : surveiller sa progression pour l'adapter à la production nationale), (2) le taux d'intérêt (une hausse réduit la masse monétaire et l'investissement mais augmente l'épargne ; une baisse produit l'effet inverse), (3) le taux de change (défense d'une parité ou dévaluation en cas de déficit structurel ou de perte de compétitivité).</div><div class="item-ar">الأهداف الوسيطة: الكتلة النقدية، سعر الفائدة، سعر الصرف.</div></div></div>
-  <div class="block"><div class="block-title">🛠️ Les cinq instruments de la politique monétaire</div>
-    <div class="phase-line"><div class="phase-num">1</div><div class="phase-text"><div class="phase-fr"><b>Réescompte</b> : achat par la banque centrale des effets de commerce détenus par les banques commerciales. Une baisse du taux de réescompte rend le crédit moins cher et relance l'économie ; une hausse le renchérit et le freine.</div><div class="phase-ar">إعادة الخصم: شراء البنك المركزي لأوراق التجارة.</div></div></div>
-    <div class="phase-line"><div class="phase-num">2</div><div class="phase-text"><div class="phase-fr"><b>Open market et pensions</b> : la banque centrale vend ou achète des bons du Trésor sur le marché interbancaire. Une vente fait baisser les prix, les banques achètent, leur liquidité diminue, le coût du crédit augmente et la création monétaire est freinée. L'achat produit l'effet inverse. Trois types de pensions existent : à 7 jours (initiative de la BC, régulières), à 5 jours (initiative des banques, irrégulières, taux plus élevé), à 24 heures (initiative des deux, lorsque le compte courant d'une banque présente un solde débiteur).</div><div class="phase-ar">السوق المفتوحة والاتفاقيات (7 أيام، 5 أيام، 24 ساعة).</div></div></div>
-    <div class="phase-line"><div class="phase-num">3</div><div class="phase-text"><div class="phase-fr"><b>Réserve obligatoire</b> : obligation pour les banques de bloquer sans intérêts à la banque centrale un pourcentage de leurs dépôts. À l'origine destinée à protéger les déposants, elle est devenue un instrument de politique monétaire. Une hausse du taux réduit la liquidité bancaire et donc la création monétaire ; une baisse l'augmente.</div><div class="phase-ar">الاحتياطي الإلزامي: رفع النسبة يخفض السيولة، خفضها يرفعها.</div></div></div>
-    <div class="phase-line"><div class="phase-num">4</div><div class="phase-text"><div class="phase-fr"><b>Encadrement du crédit</b> : fixation annuelle par la banque centrale du taux de progression des crédits accordés. Avantage : maîtrise de la masse monétaire en période inflationniste. Inconvénients : défavorise les banques dynamiques et les PME, alourdit le coût du crédit en freinant la concurrence. Cette technique a été abandonnée (France en 1987, Maroc en 1991).</div><div class="phase-ar">تأطير الائتمان — تم التخلي عنه (فرنسا 1987، المغرب 1991).</div></div></div>
-    <div class="phase-line"><div class="phase-num">5</div><div class="phase-text"><div class="phase-fr"><b>Politique sélective du crédit</b> : favorise la distribution des crédits vers les secteurs prioritaires (taux bonifiés, avantages fiscaux, réseaux bancaires spécialisés). Avantage : soutien aux secteurs essentiels. Inconvénients : endettement excessif des secteurs ciblés et développement au détriment des autres.</div><div class="phase-ar">انتقائية الائتمان: دعم القطاعات ذات الأولوية بأسعار مدعومة.</div></div></div>
-  </div>
-  <div class="block"><div class="block-title">📉 L'inflation</div>
-    <div class="item"><div class="item-fr"><b>Définition</b> : hausse généralisée, régulière et durable des prix, accompagnée d'une baisse durable de la valeur de la monnaie. On l'évalue à partir des variations des prix à la consommation des biens et services.</div><div class="item-ar">التضخم: ارتفاع عام ومنتظم ومستدام للأسعار.</div></div>
-    <div class="section-label">Trois causes principales</div>
-    <div class="phase-line"><div class="phase-num">1</div><div class="phase-text"><div class="phase-fr"><b>Inflation par les coûts</b> : provoquée par une augmentation des coûts de production (salaires, matières premières) que les entreprises répercutent sur leurs prix de vente. Plus facile en situation de monopole, d'oligopole ou de protection contre la concurrence étrangère.</div><div class="phase-ar">التضخم بالتكاليف: ارتفاع تكاليف الإنتاج يُحوَّل لأسعار البيع.</div></div></div>
-    <div class="phase-line"><div class="phase-num">2</div><div class="phase-text"><div class="phase-fr"><b>Inflation par la demande</b> : excédent de la demande globale sur l'offre disponible, ce qui exerce une pression à la hausse sur les prix. Elle peut se combiner à l'inflation par les coûts (hausse des salaires accroît la demande).</div><div class="phase-ar">التضخم بالطلب: فائض الطلب الكلي يضغط على الأسعار.</div></div></div>
-    <div class="phase-line"><div class="phase-num">3</div><div class="phase-text"><div class="phase-fr"><b>Inflation importée</b> : liée aux échanges internationaux (hausse des prix des matières premières à l'international, entrée massive de devises). C'est la forme la plus dangereuse car son origine extérieure la rend difficilement maîtrisable par les autorités monétaires.</div><div class="phase-ar">التضخم المستورد: الأخطر، منشأه الخارجي يجعله عسيرًا على السلطات.</div></div></div>
-    <div class="section-label">Conséquences</div>
-    <div class="item"><div class="item-fr">L'inflation ne pose pas de problème si ses taux restent faibles, stables et conformes aux attentes. Le problème survient avec des taux élevés et volatils : incertitude, impossibilité de faire des calculs rationnels et des projets à long terme, orientation de l'épargne vers des placements spéculatifs (immobilier, achat illégal de devises), et baisse du pouvoir d'achat des consommateurs année après année, ce qui détruit à terme une partie de la richesse nationale.</div><div class="item-ar">العواقب: غموض، مضاربة، انهيار القدرة الشرائية، تدمير الثروة الوطنية.</div></div></div>
-</div>
+            <div class="question">5. L’encadrement du crédit est un instrument qui n’est plus utilisé par les banques centrales.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.34 :</strong> "Pour l’ensemble de ces raisons, cette technique a été abandonnée dans plusieurs pays notamment en France en 1987 et au Maroc en 1991."</div>
+            </div>
 
+            <div class="question">6. Les banques commerciales sont un acteur important de la création monétaire.</div>
+            <div class="answer"><span class="true">✔ VRAI</span>
+                <div class="justification"><strong>p.23 :</strong> "Les banques commerciales jouent un rôle primordial au niveau de la création monétaire. Elles effectuent plusieurs opérations créatrices de monnaie : octroi de crédits, conversion de devises, achat de titres financiers, achat d'actifs physiques."</div>
+            </div>
+
+            <h2>III. Expliquez les sources de la création monétaire</h2>
+            <div class="justification">
+                <strong>📖 D'après les pages 21-22-23-25 :</strong><br><br>
+                <strong>Sources principales :</strong><br>
+                1. <strong>L'octroi de crédit par les banques commerciales</strong> : Création "ex nihilo" par simple jeu d'écriture. C'est la source la plus importante.<br>
+                2. <strong>L'entrée de devises</strong> : Exportations, transferts de l'étranger, dépenses des touristes étrangers.<br><br>
+                <strong>Sources secondaires :</strong><br>
+                3. L'achat par une banque commerciale d'un <strong>titre financier</strong> émis par un ANFR.<br>
+                4. L'achat par une banque commerciale d'un <strong>bien physique</strong> auprès d'un ANFR.<br>
+                5. Le paiement par le <strong>Trésor public</strong> des salaires des fonctionnaires qui ont un compte chez lui (circuit fermé).
+            </div>
+
+            <h2>IV. Le pouvoir de création monétaire des banques commerciales est-il illimité ? Justifiez</h2>
+            <div class="justification">
+                <strong>📖 Non, il est limité par trois facteurs (pages 23-24) :</strong><br>
+                1. <strong>Elles ne créent pas la monnaie fiduciaire</strong> : Seule la Banque centrale a le monopole de l'émission des billets (monnaie centrale).<br>
+                2. <strong>Elles subissent des fuites en monnaie centrale</strong> : Retraits par la clientèle ou transferts vers d'autres banques.<br>
+                3. <strong>Elles sont soumises à la réserve obligatoire</strong> : La Banque centrale impose un pourcentage des dépôts à bloquer dans les comptes à la Banque centrale.
+            </div>
+
+            <h2>V. Quels sont les facteurs qui agissent négativement sur la liquidité bancaire ?</h2>
+            <div class="justification">
+                <strong>📖 D'après les pages 27-28 :</strong><br>
+                1. <strong>Les retraits de billets par la clientèle</strong> : Toute opération de retrait diminue la liquidité bancaire.<br>
+                2. <strong>La sortie de devises</strong> : Conversion de la monnaie nationale en devises (importations, paiements à l'étranger).<br>
+                3. <strong>Les opérations avec l'administration centrale (Trésor)</strong> : Quand les paiements des clients au Trésor (impôts, amendes) sont supérieurs aux paiements reçus du Trésor.<br>
+                4. <strong>L'augmentation du taux de réserve obligatoire</strong> : Les banques doivent bloquer davantage de monnaie centrale, réduisant leur liquidité disponible.
+            </div>
+
+            <h2>VI. Quelle est la différence entre la masse monétaire au sens de M1 et la base monétaire ?</h2>
+            <div class="justification">
+                <strong>📖 D'après les pages 17, 26 et 29 :</strong>
+            </div>
+            <table>
+                <thead>
+                    <tr><th>Critère</th><th>Masse monétaire M1</th><th>Base monétaire</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Composition</strong></td><td>Billets + Monnaie divisionnaire (pièces) + Monnaie scripturale (comptes à vue)</td><td>Billets dans les caisses des banques + Avoirs des banques à la Banque centrale</td></tr>
+                    <tr><td><strong>Détenue par</strong></td><td>Les agents non financiers résidents (ménages et entreprises)</td><td>Les banques commerciales (et une petite partie par les ANFR)</td></tr>
+                    <tr><td><strong>Fonction</strong></td><td>Moyens de paiement immédiatement utilisables pour les transactions</td><td>"Monnaie centrale" qui sert de base à la création monétaire des banques</td></tr>
+                </tbody>
+            </table>
+            <div class="justification">
+                <strong>Résumé :</strong> M1 est la monnaie détenue par les agents économiques non financiers pour payer leurs transactions. La base monétaire est la monnaie créée par la Banque centrale et détenue principalement par les banques commerciales pour gérer leur liquidité et leur capacité de création monétaire.
+            </div>
+        </div>
+
+        <!-- ==================== ARABE COMPLET ==================== -->
+        <div id="content-ar" class="lang-content" dir="rtl">
+            <h2>I. لكل جملة من الجمل التالية، اختر الاقتراح أو الاقتراحات الصحيحة</h2>
+
+            <div class="question">1. من بين العمليات التالية، التي يمكن اعتبارها عمليات خلق نقدي:</div>
+            <div class="answer">
+                ✅ <strong>B</strong> – الخزينة العامة تدفع رواتب الموظفين الذين لديهم حساب لديها.<br>
+                ✅ <strong>C</strong> – شركة مصدرة تستلم في حسابها مبلغ 50.000 يورو مقابل منتجات فلاحية صدرتها.
+                <div class="justification">
+                    <strong>📖 التبرير (صفحات 21-22-25):</strong><br>
+                    • <strong>B</strong> (ص25): "الخزينة العامة تخلق النقود عندما تضع مبلغاً في حساب جاري لدفع راتب موظف لديه حساب لديها."<br>
+                    • <strong>C</strong> (ص22): "دخول العملات الأجنبية يشكل المصدر الثاني الأكثر أهمية لخلق النقدي. عندما تقوم شركة مقيمة بالتصدير، فإنها تخلق كمية جديدة من النقود."<br>
+                    ❌ <strong>A</strong> (ص21): "أي عملية تربط مؤسسة مالية بمؤسسة مالية أخرى لا يمكن أن تؤدي إلى خلق نقدي."<br>
+                    ❌ <strong>D</strong> (ص22): "خروج العملات الأجنبية هو عملية إتلاف نقدي."
+                </div>
+            </div>
+
+            <div class="question">5. في السياسة النقدية، الهدف الذي تفضله السلطات النقدية حالياً:</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – استقرار الأسعار.<br>
+                ✅ <strong>D</strong> – مكافحة التضخم.
+                <div class="justification"><strong>📖 ص31:</strong> "حالياً، تركز السلطات النقدية بشكل أكبر على الهدف الأول [استقرار الأسعار]. الحفاظ على القوة الشرائية للوكلاء الاقتصاديين من خلال مكافحة التضخم يبدو أولوية."</div>
+            </div>
+
+            <div class="question">6. من بين أدوات السياسة النقدية، تلك التي تفضلها البنك المركزي حالياً في المغرب:</div>
+            <div class="answer">
+                ✅ <strong>C</strong> – التدخل في سوق ما بين البنوك.<br>
+                ✅ <strong>D</strong> – الاحتياطي الإلزامي.
+                <div class="justification">
+                    <strong>📖 ص32-34:</strong><br>
+                    • (ص32-33): "وسائل التدخل المفضلة للبنك المركزي في سوق ما بين البنوك هي السوق المفتوحة والتسبيقات."<br>
+                    • (ص33): "سياسة الاحتياطي الإلزامي أصبحت أداة من أدوات السياسة النقدية."<br>
+                    ❌ <strong>A</strong> (ص34): "تم التخلي عن تأطير الائتمان في المغرب سنة 1991."
+                </div>
+            </div>
+
+            <h2>II. لكل اقتراح من الاقتراحات التالية، قل هل هو صحيح أم خطأ مع التبرير</h2>
+
+            <div class="question">1. إيداع 5000 درهم في حساب بنكي ليس خلقاً نقدياً.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص21:</strong> "إيداع أو سحب الأوراق النقدية من طرف وكيل غير مالي لا يمكن اعتباره خلقاً نقدياً لأنه مجرد تحويل للشكل النقدي (من نقدي يدوي إلى كتابي أو العكس) وليس له أي تأثير على القدرة على الإنفاق للوكلاء غير الماليين المقيمين."</div>
+            </div>
+
+            <div class="question">2. دفع الخزينة العامة رواتب الموظفين الذين لديهم حسابات لدى البنوك التجارية هو خلق نقدي.</div>
+            <div class="answer"><span class="false">✘ خطأ</span>
+                <div class="justification"><strong>ص25:</strong> "الخزينة العامة تخلق النقود عندما تضع مبلغاً في حساب جاري لدفع راتب موظف لديه حساب لديها. إذا كان الموظف لديه حساب في بنك تجاري، فإن الدفع يخرج من دائرة الخزينة ولا يشكل خلقاً نقدياً من طرف الخزينة."</div>
+            </div>
+
+            <div class="question">3. البنك المركزي له دور أساسي في عملية الخلق النقدي.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص26:</strong> "للبنك المركزي دور مزدوج (...) دور مباشر هامشي، ودور غير مباشر أساسي. فهو يتحكم في قدرة البنوك التجارية على خلق النقود من خلال التحكم في السيولة البنكية، وله احتكار إصدار الأوراق النقدية."</div>
+            </div>
+
+            <div class="question">4. النمو الاقتصادي هو هدف وسيط للسياسة النقدية.</div>
+            <div class="answer"><span class="false">✘ خطأ</span>
+                <div class="justification"><strong>ص31:</strong> "نميز بين نوعين من الأهداف: الأهداف النهائية والأهداف الوسيطة. النمو الاقتصادي جزء من الأهداف النهائية إلى جانب استقرار الأسعار والتوازن الخارجي والتشغيل الكامل."</div>
+            </div>
+
+            <div class="question">5. تأطير الائتمان هو أداة لم تعد تستخدم من طرف البنوك المركزية.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص34:</strong> "لجميع هذه الأسباب، تم التخلي عن هذه التقنية في عدة بلدان خاصة في فرنسا سنة 1987 والمغرب سنة 1991."</div>
+            </div>
+
+            <div class="question">6. البنوك التجارية هي فاعل مهم في الخلق النقدي.</div>
+            <div class="answer"><span class="true">✔ صحيح</span>
+                <div class="justification"><strong>ص23:</strong> "البنوك التجارية تلعب دوراً أساسياً في مستوى الخلق النقدي. فهي تقوم بعدة عمليات خالقة للنقود: منح القروض، تحويل العملات الأجنبية، شراء الأوراق المالية، شراء الأصول المادية."</div>
+            </div>
+
+            <h2>III. اشرح مصادر الخلق النقدي</h2>
+            <div class="justification">
+                <strong>📖 حسب الصفحات 21-22-23-25:</strong><br><br>
+                <strong>المصادر الرئيسية:</strong><br>
+                1. <strong>منح القروض من طرف البنوك التجارية</strong>: خلق "من لا شيء" عن طريق كتابة بسيطة. هذا هو المصدر الأكثر أهمية.<br>
+                2. <strong>دخول العملات الأجنبية</strong>: الصادرات، تحويلات المغتربين، إنفاق السياح الأجانب.<br><br>
+                <strong>المصادر الثانوية:</strong><br>
+                3. شراء بنك تجاري <strong>لورقة مالية</strong> مصدرة من وكيل غير مالي مقيم.<br>
+                4. شراء بنك تجاري <strong>لأصل مادي</strong> من وكيل غير مالي مقيم.<br>
+                5. دفع <strong>الخزينة العامة</strong> لرواتب الموظفين الذين لديهم حساب لديها (دائرة مغلقة).
+            </div>
+
+            <h2>IV. هل قدرة البنوك التجارية على خلق النقود غير محدودة؟ برر</h2>
+            <div class="justification">
+                <strong>📖 لا، محدودة بثلاثة عوامل (صفحات 23-24):</strong><br>
+                1. <strong>لا تخلق النقود اليدوية</strong>: البنك المركزي فقط من يحتكر إصدار الأوراق النقدية (النقود المركزية).<br>
+                2. <strong>تعاني من تسربات في النقود المركزية</strong>: سحوبات من طرف الزبائن أو تحويلات إلى بنوك أخرى.<br>
+                3. <strong>ملزمة بالاحتياطي الإلزامي</strong>: يفرض البنك المركزي نسبة مئوية من الودائع لتجميدها في حسابات البنوك لديه.
+            </div>
+
+            <h2>V. ما هي العوامل التي تؤثر سلباً على السيولة البنكية؟</h2>
+            <div class="justification">
+                <strong>📖 حسب الصفحات 27-28:</strong><br>
+                1. <strong>سحب الأوراق النقدية من طرف الزبائن</strong>: أي عملية سحب تقلل السيولة البنكية.<br>
+                2. <strong>خروج العملات الأجنبية</strong>: تحويل العملة الوطنية إلى عملات أجنبية (استيراد، مدفوعات للخارج).<br>
+                3. <strong>العمليات مع الإدارة المركزية (الخزينة)</strong>: عندما تكون مدفوعات الزبائن للخزينة (ضرائب، غرامات) أكبر من المدفوعات المستلمة من الخزينة.<br>
+                4. <strong>زيادة نسبة الاحتياطي الإلزامي</strong>: تضطر البنوك إلى حجب المزيد من النقود المركزية، مما يقلل سيولتها المتاحة.
+            </div>
+
+            <h2>VI. ما هو الفرق بين كتلة نقود M1 والقاعدة النقدية؟</h2>
+            <div class="justification">
+                <strong>📖 حسب الصفحات 17، 26 و 29:</strong>
+            </div>
+            <table dir="rtl">
+                <thead>
+                    <tr><th>المعيار</th><th>كتلة نقود M1</th><th>القاعدة النقدية</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>المكونات</strong></td><td>أوراق نقدية + نقود معدنية + نقود كتابية (حسابات جارية)</td><td>أوراق نقدية في صناديق البنوك + أرصدة البنوك لدى البنك المركزي</td></tr>
+                    <tr><td><strong>المالك</strong></td><td>الوكلاء غير الماليين المقيمين (الأسر والمؤسسات)</td><td>البنوك التجارية (وجزء بسيط للوكلاء غير الماليين)</td></tr>
+                    <tr><td><strong>الوظيفة</strong></td><td>وسائل دفع فورية وقابلة للاستخدام في المعاملات</td><td>"نقود مركزية" تستخدم كقاعدة لخلق النقود من طرف البنوك</td></tr>
+                </tbody>
+            </table>
+            <div class="justification">
+                <strong>خلاصة:</strong> M1 هي النقود التي يمتلكها الوكلاء الاقتصاديون غير الماليين لدفع معاملاتهم. القاعدة النقدية هي النقود التي يخلقها البنك المركزي ويمتلكها بشكل أساسي البنوك التجارية لإدارة سيولتها وقدرتها على خلق النقود.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Corrigé intégral du TD n°2 – Économie Monétaire et Financière I<br>
+        Pr. Errachid Majidi – Semestre 3 (2022-2023) – Année universitaire 2025-2026<br>
+        Toutes les justifications sont extraites du cours et référencées par numéro de page.
+    </div>
 </div>
 
 <script>
-function show(id) {
-  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  const idx = ['intro','ch1a','ch1b','ch2','ch3','ch4'].indexOf(id);
-  if (idx !== -1) document.querySelectorAll('.tab-btn')[idx].classList.add('active');
-}
+    const btnFr = document.getElementById('btn-fr');
+    const btnAr = document.getElementById('btn-ar');
+    const contentFr = document.getElementById('content-fr');
+    const contentAr = document.getElementById('content-ar');
+
+    btnFr.addEventListener('click', () => {
+        btnFr.classList.add('active');
+        btnAr.classList.remove('active');
+        contentFr.classList.add('active');
+        contentAr.classList.remove('active');
+    });
+
+    btnAr.addEventListener('click', () => {
+        btnAr.classList.add('active');
+        btnFr.classList.remove('active');
+        contentAr.classList.add('active');
+        contentFr.classList.remove('active');
+    });
 </script>
 </body>
 </html>
